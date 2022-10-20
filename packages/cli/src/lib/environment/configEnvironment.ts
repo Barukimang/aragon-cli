@@ -9,7 +9,7 @@ const defaultNetworks: TruffleConfig = require('../../config/truffle.default')
 const FRAME_ENDPOINT = 'ws://localhost:1248'
 const FRAME_ORIGIN = 'aragonCLI'
 
-const ARAGON_RINKEBY_ENDPOINT = 'wss://rinkeby.eth.aragon.network/ws'
+const ARAGON_GOERLI_ENDPOINT = 'wss://goerli.eth.aragon.network/ws'
 const ARAGON_MAINNET_ENDPOINT = 'wss://mainnet.eth.aragon.network/ws'
 
 type HDWalletProviderType = typeof HDWalletProvider
@@ -94,7 +94,7 @@ function getEnv(arapp?: ArappModule, environment?: string): EnvironmentConfig {
     const env = defaultEnvironments[environment]
     if (!env)
       throw Error(
-        `Could not find the ${environment} environment. Try using aragon:local, aragon:rinkeby or aragon:mainnet.`
+        `Could not find the ${environment} environment. Try using aragon:local, aragon:goerli or aragon:mainnet.`
       )
     return env
   }
@@ -181,8 +181,8 @@ export function configEnvironment({
 
   const wsProviderUrl = env.wsRPC
     ? env.wsRPC
-    : env.network === 'rinkeby'
-    ? ARAGON_RINKEBY_ENDPOINT
+    : env.network === 'goerli'
+    ? ARAGON_GOERLI_ENDPOINT
     : env.network === 'mainnet'
     ? ARAGON_MAINNET_ENDPOINT
     : null
