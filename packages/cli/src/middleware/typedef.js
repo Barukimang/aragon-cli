@@ -2,7 +2,7 @@
  * @tyedef {Object} ArappConfigEnvironment
  * @property {string} registry '0x5f6f7e8cc7346a11ca2def8f827b7a0b612c56a1'
  * @property {string} appName 'finance.aragonpm.eth'
- * @property {string} wsRPC 'ws://my.rinkeby.dnp.dappnode.eth:8546'
+ * @property {string} wsRPC 'ws://my.goerli.dnp.dappnode.eth:8546'
  * @property {string} network 'rpc'
  */
 
@@ -38,8 +38,8 @@
  * @typedef {Object} EnvironmentJson
  * @property {Object} apm { "ipfs": { "gateway": "https://ipfs.eth.aragon.network/ipfs" } }
  * @property {string} registry "0x98df287b6c145399aaa709692c8d308357bc085d"
- * @property {string} wsRPC "wss://rinkeby.eth.aragon.network/ws"
- * @property {string} network "rinkeby"
+ * @property {string} wsRPC "wss://goerli.eth.aragon.network/ws"
+ * @property {string} network "goerli"
  */
 
 /**
