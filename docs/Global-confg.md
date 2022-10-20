@@ -42,7 +42,7 @@ This is the arapp.json of the app build in the [tutorial](tutorial.md) configure
       "network": "localhost",
       "appName": "foo.aragonpm.eth"
     },
-    "aragon:rinkeby": {
+    "aragon:goerli": {
       "apm": {
         "ipfs": {
           "gateway": "https://ipfs.eth.aragon.network/ipfs"
@@ -50,8 +50,8 @@ This is the arapp.json of the app build in the [tutorial](tutorial.md) configure
       },
       "registry": "0x98df287b6c145399aaa709692c8d308357bc085d",
       "appName": "foo.open.aragonpm.eth",
-      "wsRPC": "wss://rinkeby.eth.aragon.network/ws",
-      "network": "rinkeby"
+      "wsRPC": "wss://goerli.eth.aragon.network/ws",
+      "network": "goerli"
     },
     "aragon:staging": {
       "apm": {
@@ -61,8 +61,8 @@ This is the arapp.json of the app build in the [tutorial](tutorial.md) configure
       },
       "registry": "0xfe03625ea880a8cba336f9b5ad6e15b0a3b5a939",
       "appName": "foo.open.aragonpm.eth",
-      "wsRPC": "wss://rinkeby.eth.aragon.network/ws",
-      "network": "rinkeby"
+      "wsRPC": "wss://goerli.eth.aragon.network/ws",
+      "network": "goerli"
     },
     "aragon:mainnet": {
       "apm": {
