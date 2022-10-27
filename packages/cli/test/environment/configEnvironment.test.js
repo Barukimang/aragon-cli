@@ -36,21 +36,21 @@ describe('Config localhost', () => {
   })
 })
 
-describe('Config Rinkeby', () => {
-  test('configEnvironment - with frame on rinkeby', async () => {
+describe('Config Goerli', () => {
+  test('configEnvironment - with frame on goerli', async () => {
     config = configEnvironment({
       useFrame: true,
-      environment: 'aragon:rinkeby',
+      environment: 'aragon:goerli',
     })
-    expect(config.network.name).toBe('frame-rinkeby')
+    expect(config.network.name).toBe('frame-goerli')
   })
 
-  test('configEnvironment - default networks - rinkeby', async () => {
+  test('configEnvironment - default networks - goerli', async () => {
     config = configEnvironment({
-      environment: 'rinkeby',
-      arapp: { environments: { rinkeby: { network: 'rinkeby' } } },
+      environment: 'goerli',
+      arapp: { environments: { goerli: { network: 'goerli' } } },
     })
-    expect(config.network.name).toBe('rinkeby')
+    expect(config.network.name).toBe('goerli')
   })
 
   const customEnvironment = 'custom-environment'
@@ -59,7 +59,7 @@ describe('Config Rinkeby', () => {
       [customEnvironment]: {
         registry: '0xfe03625ea880a8cba336f9b5ad6e15b0a3b5a939',
         appName: 'aragonnft.open.aragonpm.eth',
-        network: 'rinkeby',
+        network: 'goerli',
       },
       mainnet: {
         registry: '0x314159265dd8dbb310642f98f50c066173c1259b',
@@ -70,7 +70,7 @@ describe('Config Rinkeby', () => {
     },
   }
 
-  test('configEnvironment - custom environment - rinkeby', async () => {
+  test('configEnvironment - custom environment - goerli', async () => {
     config = configEnvironment({
       environment: customEnvironment,
       arapp,
@@ -80,7 +80,7 @@ describe('Config Rinkeby', () => {
     expect(config.network.name).toBe(selectedEnv.network)
     expect(config.apm.ensRegistryAddress).toBe(selectedEnv.registry)
     expect(config.wsProvider.connection._url).toBe(
-      'wss://rinkeby.eth.aragon.network/ws'
+      'wss://goerli.eth.aragon.network/ws'
     )
   })
 })

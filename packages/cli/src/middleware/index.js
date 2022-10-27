@@ -93,7 +93,7 @@ export function configCliMiddleware(argv) {
       )
     if (e instanceof NoEnvironmentInDefaults)
       return prettyError(
-        `Default environment '${e.message}' not found. Try using aragon:local, aragon:rinkeby or aragon:mainnet.`
+        `Default environment '${e.message}' not found. Try using aragon:local, aragon:goerli or aragon:mainnet.`
       )
     if (e instanceof NoNetworkInTruffleConfig)
       return prettyError(

@@ -1,6 +1,6 @@
 /**
  * Returns true if the provided Ethereum network id supports
- * Aragon Connect. Currently `true` for mainnet and Rinkeby
+ * Aragon Connect. Currently `true` for mainnet and Goerli
  * @param {number} Ethereum network id
  */
 export const supportsAragonConnect = (networkId) => {

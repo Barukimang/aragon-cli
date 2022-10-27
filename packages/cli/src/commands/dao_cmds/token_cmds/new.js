@@ -9,7 +9,7 @@ import { parseArgumentStringIfPossible } from '../../../util'
 
 const MAINNET_MINIME_TOKEN_FACTORY =
   '0xA29EF584c389c67178aE9152aC9C543f9156E2B3'
-const RINKEBY_MINIME_TOKEN_FACTORY =
+const GOERLI_MINIME_TOKEN_FACTORY =
   '0xad991658443c56b3dE2D7d7f5d8C68F339aEef29'
 
 export const command =
@@ -59,8 +59,8 @@ export const task = async ({
   if (chainId === 1)
     tokenFactoryAddress = tokenFactoryAddress || MAINNET_MINIME_TOKEN_FACTORY
 
-  if (chainId === 4)
-    tokenFactoryAddress = tokenFactoryAddress || RINKEBY_MINIME_TOKEN_FACTORY
+  if (chainId === 5)
+    tokenFactoryAddress = tokenFactoryAddress || GOERLI_MINIME_TOKEN_FACTORY
 
   transferEnabled = parseArgumentStringIfPossible(transferEnabled)
 
